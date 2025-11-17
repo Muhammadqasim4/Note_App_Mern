@@ -6,7 +6,7 @@ const connectDB = require('./config/db');
 const app = express();
 connectDB();
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+app.use(cors({ origin: process.env.CLIENT_URL));
 app.use(express.json());
 
 app.use('/auth', require('./routes/auth'));
